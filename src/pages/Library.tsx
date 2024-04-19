@@ -6,6 +6,7 @@ const Library: React.FC = () => {
     <Layout>
       <section>
         <h1>Library</h1>
+        <p>Библиотека</p>
         {/* Здесь будет библиотека */}
       </section>
     </Layout>
