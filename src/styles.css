@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F8FF;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Стили для заголовков и ссылок */
+  h1, h2 {
+    color: #333;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .link {
+    color: rgb(111, 151, 252); /* Например, вы можете изменить стиль на свой выбор */
+    font-weight: bold;
+  }
+  .active-link {
+    color: rgba(24, 89, 255, 0.882); /* Например, вы можете изменить стиль на свой выбор */
+    font-weight: bold;
+  }
+  
+  /* Стили для боковой панели */
+  aside {
+    background-color: #F0F8FF;
+    padding: 20px;
+  }
+  
+  /* Стили для основной секции */
+  .main-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #F0F8FF;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Медиа-запросы для адаптивной верстки */
+  @media screen and (max-width: 767px) {
+    .main-section {
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    aside {
+      width: 30%;
+    }
+  
+    .main-section {
+      width: 70%;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .app {
+      padding: 20px 40px;
+    }
+  }
