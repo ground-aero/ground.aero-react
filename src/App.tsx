@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import News from './pages/News';
 import Events from './pages/Events';
-import Library from './pages/Library';
+import LibraryPage from './pages/Library';
 
 const App: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/news" element={<News />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/library" element={<Library />} />
+        <Route path="/library" element={<LibraryPage />} />
       </Routes>
     </Router>
   );

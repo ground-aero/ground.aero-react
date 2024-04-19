@@ -4,9 +4,20 @@
     "module": "commonjs",
     "strict": true,
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "*",
+        "types/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
