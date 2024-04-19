@@ -12,6 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="app">
       <Header />
       <main>
+        <Outlet/>
         {children}
       </main>
       <Footer />

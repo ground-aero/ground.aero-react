@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
+import MainSection from '../components/MainSection';
+import Card from '../components/Card';
+import { fetchPosts } from '../api/postsApi';
+import { fetchComments } from '../api/commentsApi';
 
 const Library: React.FC = () => {
+  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const postsData = await fetchPosts();
+      const commentsData = await fetchComments();
+      setPosts(postsData);
+      setComments(commentsData);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Layout>
-      <section>
-        <h1>Library</h1>
-        <p>Библиотека</p>
-        {/* Здесь будет библиотека */}
-      </section>
+      <MainSection>
+        <h1>Library_page</h1>
+        {posts.map((post: any) => (
+          <Card key={post.id} title={post.title} body={post.body} />
+        ))}
+      </MainSection>
+
+      <aside>
+        <h2>Comments</h2>
+        <ul>
+          {comments.map((comment: any) => (
+            <li key={comment.id}>
+              <strong>{comment.name}</strong>: {comment.body}
+            </li>
+          ))}
+        </ul>
+      </aside>
+
     </Layout>
   );
 }

@@ -6,6 +6,7 @@ const Events: React.FC = () => {
     <Layout>
       <section>
         <h1>Events</h1>
+        <p>Здесь будут События</p>
         {/* Здесь будут события */}
       </section>
     </Layout>
